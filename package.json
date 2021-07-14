@@ -1,0 +1,21 @@
+{
+  "name": "tomorrow-house_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"node-sass -wr styles/main.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahoneogul/tomorrow-house_2.git"
+  },
+  "keywords": [],
+  "author": "Lee-Yun-Seul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yahoneogul/tomorrow-house_2/issues"
+  },
+  "homepage": "https://github.com/yahoneogul/tomorrow-house_2#readme"
+}
