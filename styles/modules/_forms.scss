@@ -1,0 +1,64 @@
+%form-base {
+  @include text-style(16, $primary);
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  height: 40px;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  appearance: none; //form 요소의 기본 스타일을 초기화
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  &::placeholder {
+    color: $tertiary;
+  }
+  &:not(:disabled):hover {
+    background-color: $background;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+//NOTE : Select
+.select-group {
+  position: relative;
+  &.is-active {
+    .form-select {
+      border-color: $blue;
+    }
+    .icon-caret {
+      color: $blue;
+    }
+  }
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+  .icon-caret {
+    @include pos-center-y;
+    right: 8px;
+    font-size: 24px;
+    color: $tertiary;
+    pointer-events: none;
+  }
+}
+//NOTE: input
+
+.input-group {
+  position: relative;
+  .form-input {
+    padding-left: 40px;
+  }
+  .icon-search {
+    @include pos-center-y;
+    left: 10px;
+    font-size: 20px;
+    color: $secondary;
+  }
+}
