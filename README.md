@@ -2,7 +2,7 @@
 
 ## 반응형
 
-| Mobile | Tablet | Desktop | ckass        |
+| Mobile | Tablet | Desktop | class        |
 | ------ | ------ | ------- | ------------ |
 | O      | X      | X       | '.sm-only'   |
 | O      | O      | X       | '.lg-hidden' |
