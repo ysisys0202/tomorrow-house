@@ -25,12 +25,52 @@
     @include flexbox(between);
     height: 50px;
   }
+
   &-right {
     .button-group {
-      @include flexbox(right);
+      @include flexbox(end);
     }
     .gnb-search-button {
       margin-right: 4px;
+    }
+  }
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+    &-left {
+      @include flexbox(start);
+    }
+    &-right {
+      @include flexbox(end);
+      .button-group {
+        margin-right: 24px;
+        .gnb-icon-button {
+          margin-right: 8px;
+        }
+      }
+    }
+    .logo {
+      position: static;
+      transform: translate(0, 0);
+      margin-right: 32px;
+      img {
+        height: 24px;
+      }
+    }
+    .btn-primary {
+      width: 88px;
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        margin-right: 24px;
+        width: 264px;
+      }
     }
   }
 }
