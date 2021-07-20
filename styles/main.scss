@@ -2,6 +2,7 @@
 @import './constants/typography';
 @import './constants/breakpoints';
 @import './constants/box-shadow';
+@import './constants/z-indexes';
 
 @import './base/nomalize';
 @import './base/reset';
@@ -30,3 +31,4 @@
 @import './layouts/grids';
 @import './layouts/gnb';
 @import './layouts/sidebar';
+@import './layouts/overlay';
