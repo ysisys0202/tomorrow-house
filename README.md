@@ -83,3 +83,29 @@
   </button>
 </div>
 ```
+
+### 2. Slidebar
+
+-로그인을 하지 않은 경우
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <img src="./assets/images/img-user-02.jpg" alt="징기" />
+    </div>
+    <strong class="user-name"
+      >이진기이진기이진기이진기이진기이진기이진기이진기이진기</strong
+    >
+  </a>
+</div>
+```
+
+-로그인을 한 경우
+
+```html
+<div class="sidebar-auth">
+  <a class="btn-40 btn-outlined" href="/">로그인</a>
+  <a class="btn-40 btn-primary" href="/">회원가입</a>
+</div>
+```
