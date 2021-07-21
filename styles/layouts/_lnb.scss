@@ -1,26 +1,19 @@
 .lnb {
-  position: relative;
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
+
   overflow-x: auto;
   &::-webkit-scrollbar {
     display: none;
   }
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 1px;
-    background-color: $border;
-  }
   &-list {
     @include inline-flexbox(start);
-    transform: translateX(-8px);
+    margin-left: -#{$grid-margin};
+    padding: 0 ($grid-margin - $lnb-link-padding);
+    border-bottom: 1px solid $border;
     white-space: nowrap;
     // width: max-content;
-    // max-content : 자식 요소들이 가지는 너비합의 최댓값
+    // max-content : 자식 요소들이 가지는 너비 합의 최댓값
   }
   &-item {
     &.is-active {
@@ -32,14 +25,10 @@
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
-      padding: 0 8px;
+      padding: 0 $lnb-link-padding;
       height: 40px;
       font-weight: 700;
-      transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
       border-bottom: 2px solid transparent;
-    }
-    .icon-new {
-      color: $red;
     }
   }
 }
