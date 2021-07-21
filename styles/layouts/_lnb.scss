@@ -1,0 +1,45 @@
+.lnb {
+  position: relative;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: $border;
+  }
+  &-list {
+    @include inline-flexbox(start);
+    transform: translateX(-8px);
+    white-space: nowrap;
+    // width: max-content;
+    // max-content : 자식 요소들이 가지는 너비합의 최댓값
+  }
+  &-item {
+    &.is-active {
+      a {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+    a {
+      @include inline-flexbox;
+      @include text-style(13, $dark);
+      padding: 0 8px;
+      height: 40px;
+      font-weight: 700;
+      transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
+      border-bottom: 2px solid transparent;
+    }
+    .icon-new {
+      color: $red;
+    }
+  }
+}
