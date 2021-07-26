@@ -1,0 +1,11 @@
+@mixin star-rating($size) {
+  @include flexbox(start);
+  font-size: $size;
+  .icon-star {
+    color: $border;
+    //icon-font니까 color를 사용
+    &.is-active {
+      color: $blue;
+    }
+  }
+}
