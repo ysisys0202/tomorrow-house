@@ -1,7 +1,7 @@
 .product-section {
   padding-bottom: 20px;
   &-devider {
-    margin: 0 -15px; //TODO: grid constant로 빼기
+    margin: 0 -#{$grid-margin};
     height: 8px;
     background-color: $border;
   }
