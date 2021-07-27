@@ -6,6 +6,7 @@
   //   인접해있는 셀의 보더가 중복될 경우 하나의 보더로 합쳐줌
   table-layout: fixed;
   //   table의 사이즈를 고정시켜줌
+  width: 100%;
   tr {
     @include text-style(12, $primary);
     text-align: left;
@@ -29,7 +30,7 @@
       @include text-style(14);
     }
     th {
-      width: $table-th-width-sm + $table-cell-padding;
+      width: $table-th-width-md + $table-cell-padding;
     }
   }
 }
