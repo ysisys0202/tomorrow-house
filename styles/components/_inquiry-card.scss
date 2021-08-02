@@ -41,7 +41,13 @@
       color: $blue;
     }
     p {
+      @include flexbox(start);
       color: $primary;
+    }
+    .icon-lock {
+      margin-right: 8px;
+      font-size: 16px;
+      color: $tertiary;
     }
   }
   @include responsive(T) {
